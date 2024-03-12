@@ -16,7 +16,9 @@ https://github.com/Abhishek4209/cement-strength-prediction-Advanced-Project
 
 ```bash
 
-The construction industry requires accurate predictions of cement strength to ensure the structural integrity and durability of buildings and infrastructure. The goal of this project is to build a predictive model that can estimate the strength of cement based on given input parameters. This information can assist engineers, architects, and construction professionals in making informed decisions about material selection and design optimization.
+The construction industry requires accurate predictions of cement strength to ensure the structural integrity and durability of buildings and infrastructure. 
+The goal of this project is to build a predictive model that can estimate the strength of cement based on given input parameters. 
+This information can assist engineers, architects, and construction professionals in making informed decisions about material selection and design optimization.
 ```
 
 ## Dataset Information
@@ -36,15 +38,12 @@ The dataset used in this project contains information about various attributes r
 ```
 
 ## Create a New Environment for the Project:
-
+## To acivate the environment
+#### Using anaconda
 ```bash
 
-Using anaconda
-```
 conda create -p cement python==3.12
-```
-To acivate the environment
-```
+
 conda activate cement
 
 ```
