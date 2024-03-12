@@ -24,7 +24,7 @@ class DataIngestion:
         logging.info('Data Ingestion method starts')
 
         try:
-            df=pd.read_csv(os.path.join('D:/Projects/Cement Strength Prediction/notebook/data','cement_data.csv'))
+            df=pd.read_csv(os.path.join('D:\\CEMENT STREGTH PREDECTION\\notebook\\data','cement_data.csv'))
             logging.info('Dataset read as pandas Dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)

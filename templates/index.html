@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cement Strength Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #E6F7FF, #FFEBEE);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            width: 300px;
+            text-align: right;
+            margin-right: 30px;
+        }
+        .form-row input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📌 Cement Strength Prediction 🧱</h1>
+    <form action="/predict" method="post">
+        <div class="form-row">
+            <label for="Cement">Cement (KG in a m³ Mixture):</label>
+            <input type="text" id="Cement" name="Cement" required>
+        </div>
+        <div class="form-row">
+            <label for="Blast Furnace Slag">Blast Furnace Slag (KG in a m³ Mixture):</label>
+            <input type="text" id="Blast Furnace Slag" name="Blast Furnace Slag" required>
+        </div>
+        <div class="form-row">
+            <label for="Fly Ash">Fly Ash (KG in a m³ Mixture):</label>
+            <input type="text" id="Fly Ash" name="Fly Ash" required>
+        </div>
+        <div class="form-row">
+            <label for="Water">Water (KG in a m³ Mixture):</label>
+            <input type="text" id="Water" name="Water" required>
+        </div>
+        <div class="form-row">
+            <label for="Superplasticizer">Superplasticizer (KG in a m³ Mixture):</label>
+            <input type="text" id="Superplasticizer" name="Superplasticizer" required>
+        </div>
+        <div class="form-row">
+            <label for="Coarse Aggregate">Coarse Aggregate (KG in a m³ Mixture):</label>
+            <input type="text" id="Coarse Aggregate" name="Coarse Aggregate" required>
+        </div>
+        <div class="form-row">
+            <label for="Fine Aggregate">Fine Aggregate (KG in a m³ Mixture):</label>
+            <input type="text" id="Fine Aggregate" name="Fine Aggregate" required>
+        </div>
+        <div class="form-row">
+            <label for="Age">Age (in Days):</label>
+            <input type="text" id="Age" name="Age" required>
+        </div>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    <div class="result">
+        {% if prediction_text %}
+            <strong>{{ prediction_text }}</strong>
+        {% endif %}
+    </div>
+</body>
+</html>
